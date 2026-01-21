@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyundai | Atendimento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1c2d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #ffffff;
+      color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+    }
+    button {
+      background: #002c5f;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Atendimento Hyundai</h3>
+
+  <input id="nome" placeholder="Seu nome">
+  <input id="orcamento" placeholder="Orçamento">
+  
+  <select id="preferencia">
+    <option>Automático</option>
+    <option>Manual</option>
+  </select>
+
+  <textarea id="msg" placeholder="Mensagem"></textarea>
+
+  <button onclick="enviar()">Enviar WhatsApp</button>
+</div>
+
+<script>
+function enviar() {
+  const nome = document.getElementById('nome').value;
+  const orc = document.getElementById('orcamento').value;
+  const pref = document.getElementById('preferencia').value;
+  const msg = document.getElementById('msg').value;
+
+  const texto = `Olá, meu nome é ${nome}. Orçamento: ${orc}. Preferência: ${pref}. Mensagem: ${msg}`;
+  const numero = '5546999725441';
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>
