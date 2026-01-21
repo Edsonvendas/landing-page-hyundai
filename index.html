@@ -29,25 +29,57 @@
     p {
       color: #555;
     }
-    a.btn {
-      display: block;
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
       margin-top: 20px;
       padding: 16px;
       background: #000;
       color: #fff;
-      text-decoration: none;
+      border: none;
       border-radius: 10px;
       font-size: 18px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Carros Seminovos</h1>
-    <p>As melhores oportunidades em veículos revisados e com procedência.</p>
-    <a class="btn" href="https://wa.me/5546999725441" target="_blank">
-      Falar no WhatsApp
-    </a>
+    <p>Preencha os dados e fale direto com um consultor.</p>
+
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+
+    <button onclick="enviarWhatsApp()">
+      Quero atendimento
+    </button>
   </div>
+
+  <script>
+    function enviarWhatsApp() {
+      var nome = document.getElementById("nome").value;
+      var telefone = document.getElementById("telefone").value;
+
+      if (nome === "" || telefone === "") {
+        alert("Preencha todos os campos");
+        return;
+      }
+
+      var mensagem = "Olá, meu nome é " + nome + 
+                     " e meu WhatsApp é " + telefone + 
+                     ". Quero atendimento sobre carros seminovos.";
+
+      var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
