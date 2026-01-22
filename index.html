@@ -64,23 +64,32 @@
   </div>
 
   <script>
-    function enviarWhatsApp() {
-      var nome = document.getElementById("nome").value;
-      var telefone = document.getElementById("telefone").value;
+  function getParametro(nome) {
+    var params = new URLSearchParams(window.location.search);
+    return params.get(nome) || "orgânico";
+  }
 
-      if (nome === "" || telefone === "") {
-        alert("Preencha todos os campos");
-        return;
-      }
+  function enviarWhatsApp() {
+    var nome = document.getElementById("nome").value;
+    var telefone = document.getElementById("telefone").value;
 
-      var mensagem = "Olá, meu nome é " + nome + 
-                     " e meu WhatsApp é " + telefone + 
-                     ". Quero atendimento sobre carros seminovos.";
-
-      var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
-      window.open(url, "_blank");
+    if (nome === "" || telefone === "") {
+      alert("Preencha todos os campos");
+      return;
     }
-  </script>
-</body>
-</html>
+
+    var origem = getParametro("utm_source");
+    var campanha = getParametro("utm_campaign");
+
+    var mensagem =
+      "Olá, meu nome é " + nome +
+      " e meu WhatsApp é " + telefone +
+      ". Vim do anúncio: " + origem +
+      " | Campanha: " + campanha +
+      ". Quero atendimento sobre carros seminovos.";
+
+    var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
+    window.open(url, "_blank");
+  }
+</script>
 
