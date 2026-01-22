@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Carros Seminovos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -14,6 +15,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .card {
       background: #fff;
       padding: 30px;
@@ -23,12 +25,15 @@
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
+
     h1 {
       margin-top: 0;
     }
+
     p {
       color: #555;
     }
+
     input {
       width: 100%;
       padding: 14px;
@@ -37,6 +42,7 @@
       border: 1px solid #ccc;
       font-size: 16px;
     }
+
     button {
       width: 100%;
       margin-top: 20px;
@@ -50,6 +56,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <h1>Carros Seminovos</h1>
@@ -64,44 +71,47 @@
   </div>
 
   <script>
-  function getParametro(nome) {
-    var params = new URLSearchParams(window.location.search);
-    return params.get(nome) || "orgânico";
-  }
-
-  function enviarWhatsApp() {
-    var nome = document.getElementById("nome").value;
-    var telefone = document.getElementById("telefone").value;
-
-    if (nome === "" || telefone === "") {
-      alert("Preencha todos os campos");
-      return;
+    function getParametro(nome) {
+      var params = new URLSearchParams(window.location.search);
+      return params.get(nome) || "orgânico";
     }
 
-    var origem = getParametro("utm_source");
-    var campanha = getParametro("utm_campaign");
+    function enviarWhatsApp() {
+      var nome = document.getElementById("nome").value;
+      var telefone = document.getElementById("telefone").value;
 
-    var mensagem =
-      "Olá, meu nome é " + nome +
-      " e meu WhatsApp é " + telefone +
-      ". Vim do anúncio: " + origem +
-      " | Campanha: " + campanha +
-      ". Quero atendimento sobre carros seminovos.";
+      if (nome === "" || telefone === "") {
+        alert("Preencha todos os campos");
+        return;
+      }
 
-    var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
-    window.open(url, "_blank");
- // ENVIO PARA GOOGLE SHEETS
-fetch("https://script.google.com/macros/s/AKfycbxmx3VLKWGT2DoQChrnp5jdu-vuhkqPqj_BfgnKCHm-1nJ1EqdHnbdkU1egdMb9Om3vaw/exec", {
-  method: "POST",
-  mode: "no-cors",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    mensagem: mensagem,
-    data: new Date().toLocaleString()
-  })
-});
- }
-</script>
+      var origem = getParametro("utm_source");
+      var campanha = getParametro("utm_campaign");
 
+      var mensagem =
+        "Olá, meu nome é " + nome +
+        " e meu WhatsApp é " + telefone +
+        ". Vim do anúncio: " + origem +
+        " | Campanha: " + campanha +
+        ". Quero atendimento sobre carros seminovos.";
+
+      // 1️⃣ ENVIA PARA GOOGLE SHEETS
+      fetch("https://script.google.com/macros/s/AKfycbxmx3VLKWGT2DoQChrnp5jdu-vuhkqPqj_BfgnKCHm-1nJ1EqdHnbdkU1egdMb9Om3vaw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          mensagem: mensagem,
+          data: new Date().toLocaleString()
+        })
+      });
+
+      // 2️⃣ ABRE O WHATSAPP
+      var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
