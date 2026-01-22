@@ -90,6 +90,18 @@
 
     var url = "https://wa.me/5546999725441?text=" + encodeURIComponent(mensagem);
     window.open(url, "_blank");
-  }
+ // ENVIO PARA GOOGLE SHEETS
+fetch("https://script.google.com/macros/s/AKfycbxmx3VLKWGT2DoQChrnp5jdu-vuhkqPqj_BfgnKCHm-1nJ1EqdHnbdkU1egdMb9Om3vaw/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    mensagem: mensagem,
+    data: new Date().toLocaleString()
+  })
+});
+ }
 </script>
 
