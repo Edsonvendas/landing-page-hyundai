@@ -96,16 +96,18 @@
         ". Quero atendimento sobre carros seminovos.";
 
       // 1️⃣ ENVIA PARA GOOGLE SHEETS
-      fetch("https://script.google.com/macros/s/AKfycbxmx3VLKWGT2DoQChrnp5jdu-vuhkqPqj_BfgnKCHm-1nJ1EqdHnbdkU1egdMb9Om3vaw/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          mensagem: mensagem,
-          data: new Date().toLocaleString()
-        })
+      fetch("https://script.google.com/macros/s/AKfycbzuR_z2bgNvBYY5CdiQ9zsZvViQxyCmyQ_S6trQQeznWQgQD6lbjMhj1xRCZAM77YKmYA/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    nome: nome,
+    telefone: telefone,
+    origem: origem,
+    campanha: campanha,
+    data: new Date().toLocaleString()
+  })
       });
 
       // 2️⃣ ABRE O WHATSAPP
