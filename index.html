@@ -1,267 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carros Seminovos | Oportunidades Imperdíveis</title>
-  <meta name="description" content="Carros seminovos revisados, com procedência e ótimo preço. Fale agora e garanta a melhor negociação.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root{
-      --primary:#0b0b0b;
-      --accent:#e10600;
-      --gold:#d4af37;
-      --gray:#f3f3f3;
-    }
+<title>Carros Seminovos Pato Branco | Venda e Intermediações</title>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-    body{
-      background:#000;
-      color:#fff;
-    }
+body{
+  background:#000;
+  color:#fff;
+}
 
-    /* HEADER */
-    header{
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 45%),
-        linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.92)),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80")
-        center/cover no-repeat;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:50px 20px;
-    }
+/* HERO */
+header{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+}
 
-    header img{
-      max-width:220px;
-      margin-bottom:25px;
-      filter:drop-shadow(0 0 25px rgba(212,175,55,.45));
-    }
+header img{
+  width:260px;
+  max-width:90%;
+  margin-bottom:25px;
+}
 
-    header h1{
-      font-size:2.6rem;
-      margin-bottom:15px;
-    }
+header h1{
+  font-size:2.6rem;
+  margin-bottom:15px;
+}
 
-    header p{
-      font-size:1.2rem;
-      max-width:720px;
-      color:#ddd;
-      margin-bottom:30px;
-    }
+header p{
+  max-width:720px;
+  font-size:1.15rem;
+  color:#ddd;
+  margin-bottom:30px;
+}
 
-    .cta{
-      background:var(--accent);
-      color:#fff;
-      padding:18px 38px;
-      border-radius:50px;
-      text-decoration:none;
-      font-size:1.1rem;
-      font-weight:bold;
-      transition:.3s;
-    }
+.cta{
+  background:#e10600;
+  color:#fff;
+  padding:16px 38px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.05rem;
+  transition:.3s;
+}
 
-    .cta:hover{
-      background:#ff1a12;
-      transform:scale(1.05);
-    }
+.cta:hover{
+  transform:scale(1.06);
+}
 
-    /* BENEFÍCIOS */
-    section{
-      padding:70px 20px;
-      background:#fff;
-      color:#111;
-    }
+/* BENEFÍCIOS */
+section{
+  padding:70px 20px;
+  background:#fff;
+  color:#111;
+}
 
-    .benefits{
-      max-width:1100px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-    }
+.benefits{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
 
-    .card{
-      background:var(--gray);
-      padding:30px;
-      border-radius:18px;
-      text-align:center;
-      box-shadow:0 15px 35px rgba(0,0,0,.15);
-    }
+.card{
+  background:#f3f3f3;
+  padding:28px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 12px 28px rgba(0,0,0,.15);
+  font-weight:bold;
+}
 
-    .card h3{
-      margin-bottom:10px;
-    }
+/* VEÍCULOS */
+.inventory{
+  background:#f9f9f9;
+}
 
-    /* INVENTÁRIO */
-    .inventory{
-      background:
-        linear-gradient(rgba(255,255,255,.97),rgba(255,255,255,.97)),
-        url("https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80")
-        center/cover fixed;
-    }
+.inventory h2{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:40px;
+}
 
-    .inventory h2{
-      text-align:center;
-      font-size:2.2rem;
-      margin-bottom:40px;
-    }
+.cars{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
 
-    .cars{
-      max-width:1100px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-    }
+.car{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
 
-    .car{
-      background:#fff;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 15px 35px rgba(0,0,0,.2);
-    }
+.car img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
 
-    .car img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-    }
+.car div{
+  padding:18px;
+  font-weight:bold;
+}
 
-    .car div{
-      padding:20px;
-    }
+/* FINAL */
+.final{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
 
-    .car h3{
-      margin-bottom:8px;
-    }
-
-    .car span{
-      color:var(--accent);
-      font-weight:bold;
-      font-size:1.1rem;
-    }
-
-    /* CTA FINAL */
-    .final-cta{
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:80px 20px;
-    }
-
-    .final-cta h2{
-      font-size:2.3rem;
-      margin-bottom:20px;
-    }
-
-    /* WHATSAPP */
-    .whatsapp-float{
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      background:#25d366;
-      color:#fff;
-      padding:15px 22px;
-      border-radius:50px;
-      font-weight:bold;
-      text-decoration:none;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-      z-index:999;
-    }
-
-    footer{
-      background:#000;
-      color:#777;
-      text-align:center;
-      padding:20px;
-      font-size:.9rem;
-    }
-  </style>
+.whats{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.jpg" alt="Logo Carros Seminovos">
-  <h1>Carros Seminovos de Confiança</h1>
-  <p>Veículos selecionados, revisados e com as melhores oportunidades do mercado. Negociação rápida, segura e sem enrolação.</p>
-  <a class="cta" href="https://wa.me/5546999725441" target="_blank">Falar Agora no WhatsApp</a>
+  <!-- SUA LOGOMARCA -->
+  <img src="logo.jpg" alt="Carros Seminovos Pato Branco">
+
+  <h1>Venda e Intermediações de Veículos</h1>
+  <p>Carros seminovos selecionados, com procedência, transparência e negociação rápida.</p>
+
+  <a class="cta" href="https://wa.me/5546999725441" target="_blank">
+    Falar Agora no WhatsApp
+  </a>
 </header>
 
-<a href="https://wa.me/5546999725441" target="_blank" class="whatsapp-float">WhatsApp</a>
+<a class="whats" href="https://wa.me/5546999725441" target="_blank">
+  WhatsApp
+</a>
 
 <section>
   <div class="benefits">
-    <div class="card">
-      <h3>✔ Procedência Garantida</h3>
-      <p>Todos os veículos com histórico verificado.</p>
-    </div>
-    <div class="card">
-      <h3>✔ Ótimo Custo-Benefício</h3>
-      <p>Preços justos e oportunidades reais.</p>
-    </div>
-    <div class="card">
-      <h3>✔ Atendimento Rápido</h3>
-      <p>Negocie direto pelo WhatsApp.</p>
-    </div>
-    <div class="card">
-      <h3>✔ Segurança na Compra</h3>
-      <p>Transparência do início ao fim.</p>
-    </div>
+    <div class="card">✔ Procedência Garantida</div>
+    <div class="card">✔ Preço Justo</div>
+    <div class="card">✔ Atendimento Rápido</div>
+    <div class="card">✔ Segurança na Compra</div>
   </div>
 </section>
 
 <section class="inventory">
   <h2>Algumas Oportunidades</h2>
   <div class="cars">
+
     <div class="car">
-      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80">
-      <div>
-        <h3>Volkswagen Polo</h3>
-        <span>Consulte valor</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80">
+      <div>Volkswagen Polo</div>
     </div>
 
     <div class="car">
-      <img src="https://images.unsplash.com/photo-1617531653520-4893fcd0c4b0?auto=format&fit=crop&w=800&q=80">
-      <div>
-        <h3>Toyota Corolla</h3>
-        <span>Consulte valor</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80">
+      <div>Toyota Corolla</div>
     </div>
 
     <div class="car">
-      <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=800&q=80">
-      <div>
-        <h3>Chevrolet Onix</h3>
-        <span>Consulte valor</span>
-      </div>
+      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80">
+      <div>Chevrolet Onix</div>
     </div>
+
   </div>
 </section>
 
-<div class="final-cta">
-  <h2>Quer saber mais?</h2>
-  <p>Clique abaixo e fale agora com um especialista.</p><br>
-  <a class="cta" href="https://wa.me/5546999725441" target="_blank">Quero Meu Carro Agora</a>
+<div class="final">
+  <h2>Quer saber mais?</h2><br>
+  <a class="cta" href="https://wa.me/5546999725441" target="_blank">
+    Clique Aqui e Fale Agora
+  </a>
 </div>
-
-<footer>
-  © 2026 Carros Seminovos • Todos os direitos reservados
-</footer>
 
 </body>
 </html>
-
-
