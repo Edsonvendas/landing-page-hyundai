@@ -9,6 +9,7 @@
     :root{
       --primary:#111;
       --accent:#e10600;
+      --gold:#d4af37;
       --light:#ffffff;
       --gray:#f3f3f3;
     }
@@ -17,55 +18,45 @@
     header{
       min-height:100vh;
       background:
-        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+        radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 45%),
+        linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.92)),
         url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:40px 20px;
+      padding:50px 20px;
     }
-    header img{max-width:180px;margin-bottom:20px}
-    header h1{font-size:2.5rem;margin-bottom:15px}
+    header img{max-width:200px;margin-bottom:25px;filter:drop-shadow(0 0 25px rgba(212,175,55,.45))}
+    header h1{font-size:2.6rem;margin-bottom:15px}
     header p{font-size:1.2rem;max-width:700px;margin-bottom:30px;color:#ddd}
-    .cta{
-      background:var(--accent);
-      color:#fff;
-      padding:18px 35px;
-      border-radius:50px;
-      text-decoration:none;
-      font-size:1.1rem;
-      font-weight:bold;
-      transition:.3s;
-    }
+    .cta{background:var(--accent);color:#fff;padding:18px 35px;border-radius:50px;text-decoration:none;font-size:1.1rem;font-weight:bold;transition:.3s}
     .cta:hover{background:#ff1a12;transform:scale(1.05)}
 
     section{padding:70px 20px;background:#fff;color:#111}
     .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;max-width:1100px;margin:0 auto}
-    .card{background:var(--gray);padding:30px;border-radius:15px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+    .card{background:var(--gray);padding:30px;border-radius:18px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,.15)}
     .card h3{margin-bottom:10px}
 
-    .inventory{
-      background:
-        linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-        url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80') center/cover fixed;
-    }
-    .inventory h2{text-align:center;margin-bottom:40px;font-size:2rem}
+    .inventory{background:linear-gradient(rgba(255,255,255,.97),rgba(255,255,255,.97)),url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1600&q=80') center/cover fixed}
+    .inventory h2{text-align:center;margin-bottom:40px;font-size:2.2rem}
     .cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1100px;margin:0 auto}
-    .car{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.15)}
+    .car{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,.2)}
     .car img{width:100%;height:180px;object-fit:cover}
     .car div{padding:20px}
     .car h3{margin-bottom:8px}
     .car span{color:var(--accent);font-weight:bold;font-size:1.1rem}
 
-    .final-cta{
-      background:var(--primary);
-      color:#fff;
-      text-align:center;
-      padding:70px 20px;
-    }
-    .final-cta h2{font-size:2.2rem;margin-bottom:20px}
+    .trust{background:#111;color:#fff;text-align:center;padding:70px 20px}
+    .trust h2{margin-bottom:20px;font-size:2.1rem}
+    .trust p{max-width:800px;margin:0 auto;color:#ccc;font-size:1.1rem}
+
+    .final-cta{background:#000;color:#fff;text-align:center;padding:80px 20px}
+    .final-cta h2{font-size:2.3rem;margin-bottom:20px}
+
+    .whatsapp-float{position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;padding:15px 22px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.35);z-index:999}
+
     footer{background:#000;color:#777;text-align:center;padding:20px;font-size:.9rem}
   </style>
 </head>
@@ -76,6 +67,7 @@
     <h1>Carros Seminovos de Confiança</h1>
     <p>Veículos selecionados, revisados e com as melhores oportunidades do mercado. Negociação rápida, segura e sem enrolação.</p>
     <a class="cta" href="https://wa.me/5546999725441" target="_blank">Falar Agora no WhatsApp</a>
+  <a href="https://wa.me/5546999725441" target="_blank" class="whatsapp-float">WhatsApp</a>
   </header>
 
   <section>
@@ -137,4 +129,3 @@
   </footer>
 </body>
 </html>
-
