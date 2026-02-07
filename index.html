@@ -13,9 +13,10 @@ body{background:#000;color:#fff}
 header{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.95)),
-    url("https://upload.wikimedia.org/wikipedia/commons/7/7c/RAM_1500_Laramie_2023.jpg")
-    center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=80");
+  background-position:center;
+  background-size:cover;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -30,7 +31,7 @@ header p{max-width:760px;font-size:1.2rem;color:#ddd;margin-bottom:30px}
 .cta{
   background:#e10600;
   color:#fff;
-  padding:18px 40px;
+  padding:18px 42px;
   border-radius:50px;
   text-decoration:none;
   font-weight:bold;
@@ -49,7 +50,6 @@ h2{text-align:center;font-size:2.4rem;margin-bottom:50px}
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:25px;
 }
-
 .card{
   background:#f3f3f3;
   padding:30px;
@@ -61,7 +61,6 @@ h2{text-align:center;font-size:2.4rem;margin-bottom:50px}
 
 /* VEÍCULOS */
 .inventory{background:#f8f8f8}
-
 .cars{
   max-width:1200px;
   margin:auto;
@@ -69,29 +68,21 @@ h2{text-align:center;font-size:2.4rem;margin-bottom:50px}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
-
 .car{
   background:#fff;
   border-radius:18px;
   overflow:hidden;
   box-shadow:0 15px 35px rgba(0,0,0,.2);
 }
-
-.car img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-}
-
-.car div{
-  padding:20px;
-  font-weight:bold;
-  text-align:center;
-}
+.car img{width:100%;height:230px;object-fit:cover}
+.car div{padding:20px;font-weight:bold;text-align:center}
 
 /* FINAL */
-.final{background:#000;text-align:center;padding:90px 20px}
-
+.final{
+  background:#000;
+  text-align:center;
+  padding:90px 20px;
+}
 .whats{
   position:fixed;
   bottom:20px;
@@ -112,7 +103,7 @@ h2{text-align:center;font-size:2.4rem;margin-bottom:50px}
   <h1>Concessionária Premium 0km</h1>
   <p>
     Especialistas em veículos novos <strong>Jeep, RAM e Hyundai</strong>.
-    Atendimento de alto padrão, linha atual e condições exclusivas.
+    Atendimento de alto padrão, condições exclusivas e negociação segura.
   </p>
   <a class="cta" href="https://wa.me/5546999725441" target="_blank">
     Falar com Especialista
@@ -127,42 +118,48 @@ h2{text-align:center;font-size:2.4rem;margin-bottom:50px}
     <div class="card">✔ Concessionária de Luxo</div>
     <div class="card">✔ Veículos 0km</div>
     <div class="card">✔ Atendimento Personalizado</div>
-    <div class="card">✔ PCD & Produtor Rural</div>
+    <div class="card">✔ Descontos PCD e Produtor Rural</div>
   </div>
 </section>
 
 <section class="inventory">
-  <h2>Modelos em Destaque</h2>
+  <h2>Modelos Disponíveis</h2>
   <div class="cars">
 
+    <!-- RAM -->
     <div class="car">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/RAM_1500_Laramie_2023.jpg">
-      <div>RAM 1500</div>
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=80">
+      <div>RAM • Picapes de Alto Luxo</div>
     </div>
 
+    <!-- JEEP RENEGADE -->
     <div class="car">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Jeep_Renegade_2022.jpg">
-      <div>Jeep Renegade</div>
+      <img src="https://images.unsplash.com/photo-1597008641621-1c5f4b98e65b?auto=format&fit=crop&w=1200&q=80">
+      <div>Jeep Renegade • 0km</div>
     </div>
 
+    <!-- JEEP COMPASS -->
     <div class="car">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Jeep_Compass_2022.jpg">
-      <div>Jeep Compass</div>
+      <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=1200&q=80">
+      <div>Jeep Compass • 0km</div>
     </div>
 
+    <!-- HYUNDAI -->
     <div class="car">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Hyundai_Tucson_2023.jpg">
-      <div>Hyundai Tucson</div>
+      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80">
+      <div>Hyundai • Linha Premium</div>
     </div>
 
   </div>
 </section>
 
 <div class="final">
-  <h2>Condições Exclusivas</h2>
-  <p style="max-width:760px;margin:20px auto;color:#ccc;font-size:1.1rem">
-    Descontos especiais para <strong>PCD</strong> e <strong>Produtor Rural</strong>.
+  <h2>Condições Especiais</h2>
+  <p style="margin:20px auto;max-width:760px;color:#ccc;font-size:1.1rem">
+    Descontos exclusivos para <strong>PCD</strong> e <strong>Produtor Rural</strong>.
+    Consulte versões, prazos e disponibilidade.
   </p>
+  <br>
   <a class="cta" href="https://wa.me/5546999725441" target="_blank">
     Consultar Agora
   </a>
