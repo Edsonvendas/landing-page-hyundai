@@ -3,205 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concessionária Premium 0km | Jeep • RAM • Hyundai</title>
+<title>Concessionária Premium 0km | Jeep • Hyundai • RAM</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#000;color:#fff}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-/* HERO */
-header{
+body{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.95)),
-    url("https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1600&q=80");
-  background-position:center;
-  background-size:cover;
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("logo.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center top;
+  color:#fff;
   display:flex;
-  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:40px 20px;
+  padding:20px;
 }
 
-header h1{
-  font-size:2.8rem;
-  margin-bottom:15px;
+.container{
+  max-width:820px;
+  background:rgba(0,0,0,0.65);
+  padding:50px 30px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
-header p{
-  max-width:760px;
-  font-size:1.2rem;
+h1{
+  font-size:2.6rem;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:1.15rem;
+  line-height:1.6;
   color:#ddd;
-  margin-bottom:30px;
+  margin-bottom:25px;
+}
+
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:35px;
+}
+
+.badge{
+  background:#111;
+  padding:12px 22px;
+  border-radius:30px;
+  font-weight:bold;
+  border:1px solid #333;
 }
 
 .cta{
+  display:inline-block;
   background:#e10600;
   color:#fff;
-  padding:18px 42px;
+  padding:18px 45px;
   border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
   font-size:1.1rem;
-}
-
-/* SEÇÕES */
-section{
-  padding:80px 20px;
-  background:#fff;
-  color:#111;
-}
-
-h2{
-  text-align:center;
-  font-size:2.4rem;
-  margin-bottom:50px;
-}
-
-/* BENEFÍCIOS */
-.benefits{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:#f3f3f3;
-  padding:30px;
-  border-radius:18px;
-  text-align:center;
   font-weight:bold;
-  box-shadow:0 12px 28px rgba(0,0,0,.15);
+  text-decoration:none;
 }
 
-/* VEÍCULOS */
-.inventory{
-  background:#f8f8f8;
+.cta:hover{
+  opacity:0.9;
 }
 
-.cars{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.car{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,.2);
-}
-
-.car img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-}
-
-.car div{
-  padding:20px;
-  font-weight:bold;
-  text-align:center;
-}
-
-/* FINAL */
-.final{
-  background:#000;
-  text-align:center;
-  padding:90px 20px;
-}
-
-.whats{
+.whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25d366;
   color:#fff;
-  padding:15px 24px;
+  padding:14px 22px;
   border-radius:50px;
-  text-decoration:none;
   font-weight:bold;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="container">
   <h1>Concessionária Premium 0km</h1>
+
   <p>
-    Especialistas em veículos novos <strong>Jeep, RAM e Hyundai</strong>.
-    Concessionária de luxo com atendimento personalizado, condições exclusivas
-    e negociação segura.
+    Atuamos exclusivamente com veículos <strong>novos 0km</strong> das marcas
+    <strong>Jeep, Hyundai e RAM</strong>.
+    Atendimento personalizado, negociação segura e padrão de concessionária de luxo.
   </p>
-  <a class="cta" href="https://wa.me/5546999725441" target="_blank">
-    Falar com Especialista
-  </a>
-</header>
 
-<a class="whats" href="https://wa.me/5546999725441" target="_blank">
-  WhatsApp
-</a>
-
-<section>
-  <h2>Quem Somos</h2>
-  <div class="benefits">
-    <div class="card">✔ Concessionária de Luxo</div>
-    <div class="card">✔ Veículos 0km</div>
-    <div class="card">✔ Atendimento Personalizado</div>
-    <div class="card">✔ Desconto PCD e Produtor Rural</div>
+  <div class="badges">
+    <div class="badge">✔ Veículos 0km</div>
+    <div class="badge">✔ Jeep • Hyundai • RAM</div>
+    <div class="badge">✔ Concessionária de Luxo</div>
+    <div class="badge">✔ Descontos PCD</div>
+    <div class="badge">✔ Produtor Rural</div>
   </div>
-</section>
 
-<section class="inventory">
-  <h2>Modelos das Marcas que Trabalhamos</h2>
-  <div class="cars">
-
-    <!-- RAM -->
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=80" alt="RAM 1500">
-      <div>RAM 1500 • Picape de Luxo</div>
-    </div>
-
-    <!-- JEEP RENEGADE -->
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1597008641621-1c5f4b98e65b?auto=format&fit=crop&w=1200&q=80" alt="Jeep Renegade">
-      <div>Jeep Renegade • SUV</div>
-    </div>
-
-    <!-- JEEP COMPASS -->
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=1200&q=80" alt="Jeep Compass">
-      <div>Jeep Compass • SUV Premium</div>
-    </div>
-
-    <!-- HYUNDAI -->
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80" alt="Hyundai SUV">
-      <div>Hyundai • Linha SUV e Sedan</div>
-    </div>
-
-  </div>
-</section>
-
-<div class="final">
-  <h2>Condições Especiais</h2>
-  <p style="margin:20px auto;max-width:760px;color:#ccc;font-size:1.1rem">
-    Condições diferenciadas para <strong>PCD</strong> e <strong>Produtor Rural</strong>.
-    Consulte versões, prazos e disponibilidade com um especialista.
-  </p>
-  <br>
   <a class="cta" href="https://wa.me/5546999725441" target="_blank">
-    Consultar Agora
+    Falar com Especialista Agora
   </a>
 </div>
+
+<a class="whatsapp" href="https://wa.me/5546999725441" target="_blank">
+  WhatsApp
+</a>
 
 </body>
 </html>
